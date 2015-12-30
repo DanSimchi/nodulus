@@ -30,29 +30,29 @@
 
     </div> 
 
-    <div class="form-group">
-        installed modules
-        <div class="list-group">
-             
-            <a class="list-group-item" ng-repeat="package in ModuleList">
-                {{package.module.name}}
+    
 
-                <span class="btn btn-sm btn-danger pull-right" ng-click="UnInstall(package.module)"><span class="fa fa-recycle"></span> </span>
-                <span class="btn btn-sm btn-info pull-right" ng-click="Pack(package.module)"><span class="fa fa-file-archive-o"></span> </span>
-            </a>
-        </div>
-        
-            
-        </div>
 
-    <md-progress-linear mode="indeterminate" data-ng-show="ModuleLoading"></md-progress-linear>
-        <div class="form-group">
-            <input type="text" class="form-control" ng-model="Module.Name" />
-            <a class="btn btn-primary" ng-click="Install()">install</a>
-             
+
+        <div class="panel panel-primary col-md-6 container-fluid"
+             style="height: {{PaneHeight}}px;position: fixed;{{$Language.language.align}}: 100px;top:200px;" ng-show="ShowAbout">
+
+
+            <div class="panel-heading">
+                {{"about"| translate}}
+
+            </div>
+            <div class="panel-body" data-ng-include="AboutUrl"></div>
+
+
+
+
+
 
         </div>
-
-
     </div>
+
+
+
+
 
